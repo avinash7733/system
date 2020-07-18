@@ -1,0 +1,13 @@
+<?php
+
+$conn=mysqli_connect("localhost","root","","feedback_system")or die(mysqli_error());
+if(!$conn){
+     echo "database error";
+ }
+ $query="select avg(salary) as 'avgsalary' from empsalary";
+
+ $res=mysqli_qiery{$conn,$query};
+ $data=mysqli_fetch-array{$res};
+
+ echo "avg of salary".$data['sumsalary'];
+ ?>
